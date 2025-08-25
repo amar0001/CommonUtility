@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- FCM -->
+    <string name="important_notifications">Important Notifications</string>
+    <string name="this_is_for_important_notifications">This is for important notifications</string>
+
+    <string name="default_notification_channel_id" translatable="false">channel_id</string>
+    <string name="request_notification_permission">Request permission</string>
+    <string name="notification_permission_title">Notification permission</string>
+    <string name="notification_permission_description">The notification permission is important for this app. Please grant the permission.</string>
+    <string name="notification_permission_settings">The notification permission is important for this app. Please navigate to your device settings and enable notifications for Make it So.</string>
+
+
+
+</resources>
