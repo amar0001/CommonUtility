@@ -26,6 +26,6 @@ fun CheckBoxWidget(onOptionSelected: (Boolean) -> Unit, text: String) {
                 onOptionSelected(isChecked)
             } // Update the checkbox state
         )
-        TextWidgetNormal(text = text)
+        SimpleText(text = text)
     }
 }

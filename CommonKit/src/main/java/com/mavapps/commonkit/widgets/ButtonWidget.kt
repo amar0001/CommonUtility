@@ -14,14 +14,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ButtonWidgetWrapContent(text: String = "Button Text", buttonClick: () -> Unit = {}) {
-    ButtonWidget(text,  modifier = Modifier.wrapContentWidth().wrapContentHeight(), buttonClick)
+fun ButtonWidgetWrapContent(text: String = "Button Text",
+                            buttonClick: () -> Unit = {}) {
+    ButtonWidget(text, modifier = Modifier
+        .wrapContentWidth()
+        .wrapContentHeight(), buttonClick)
 }
 
 @Composable
-fun ButtonWidget(text: String = "Button Text",
-                 modifier: Modifier= Modifier.fillMaxWidth().wrapContentHeight(),
-                 buttonClick: () -> Unit = {}, ) {
+fun ButtonWidget(
+    text: String = "Button Text",
+    modifier: Modifier = Modifier
+        .fillMaxWidth()
+        .wrapContentHeight(),
+    buttonClick: () -> Unit = {},
+) {
 
     Column(modifier = modifier) {
 
@@ -32,15 +39,17 @@ fun ButtonWidget(text: String = "Button Text",
             },
             colors = ButtonDefaults.buttonColors(
                 containerColor = MaterialTheme.colorScheme.primary,  // Dynamically set background color
-                contentColor =  MaterialTheme.colorScheme.onPrimary           // Dynamically set text color
+                contentColor = MaterialTheme.colorScheme.onPrimary           // Dynamically set text color
             ),
-            modifier = Modifier.padding(top = 6.dp, bottom = 6.dp, start = 50.dp, end = 50.dp)
-                .fillMaxWidth().align(Alignment.CenterHorizontally)
+            modifier = Modifier
+                .padding(top = 6.dp, bottom = 6.dp, start = 50.dp, end = 50.dp)
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally)
 
 
         ) {
 
-            TextWidgetNormal(text)
+            SimpleText(text)
 
         }
     }

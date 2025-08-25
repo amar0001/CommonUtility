@@ -29,8 +29,8 @@ import androidx.compose.ui.unit.dp
 fun SearchBarCard(
     modifier: Modifier = Modifier,
     searchText: String = "",
-    onSearchTextChange: (String) -> Unit ={}
-){
+    onSearchTextChange: (String) -> Unit = {}
+) {
     Box(
 
         modifier = Modifier
@@ -42,24 +42,27 @@ fun SearchBarCard(
                 color = MaterialTheme.colorScheme.surface,
                 shape = RoundedCornerShape(60.dp)
             ),
-    ){
+    ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
-        ){
-            Icon(imageVector = Icons.Default.Search,
+        ) {
+            Icon(
+                imageVector = Icons.Default.Search,
                 contentDescription = "Search Icon",
-                        modifier = Modifier.padding(start = 10.dp))
+                modifier = Modifier.padding(start = 10.dp)
+            )
             val textState = remember { mutableStateOf("") }
 
-           // Text(text = "Search")
+            // Text(text = "Search")
             // TextField for input
             TextField(
                 value = searchText,
                 onValueChange = onSearchTextChange,
                 placeholder = { Text("Search..") },
                 modifier = Modifier
-                    .fillMaxWidth().wrapContentWidth(),
+                    .fillMaxWidth()
+                    .wrapContentWidth(),
                 colors = TextFieldDefaults.colors(
                     focusedContainerColor = Color.Transparent,
                     unfocusedContainerColor = Color.Transparent,

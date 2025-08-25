@@ -32,7 +32,7 @@ fun ButtonWidgetWrapContent(text: String = "Button Text",modifier: Modifier = Mo
 
         ) {
 
-            TextWidgetNormal(text)
+            SimpleText(text)
 
         }
     }

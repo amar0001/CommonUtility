@@ -52,8 +52,3 @@ fun Activity.safeFinish() {
     }
 }
 
-// Format current date/time
-fun getFormattedDate(format: String = "dd MMM yyyy, hh:mm a"): String {
-    val sdf = SimpleDateFormat(format, Locale.getDefault())
-    return sdf.format(Date())
-}

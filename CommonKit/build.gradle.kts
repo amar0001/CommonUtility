@@ -1,7 +1,8 @@
 plugins {
-    id("com.android.library") version "8.5.2"
+    id("com.android.library") version "8.12.1"
     id("org.jetbrains.kotlin.android") version "2.2.10"
     id("maven-publish")
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
